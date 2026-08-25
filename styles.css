@@ -30,6 +30,18 @@ h1,h2,h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; ma
 .text-link-light { color: white; }.text-link-light span { color: #9fe3b6; }
 @media (prefers-reduced-motion: reduce) { .hero-slide, .hero-slide.is-active { transition: opacity .4s linear; transform: none; } }
 .section { padding: clamp(4.7rem, 9vw, 9rem) clamp(1.4rem, 9vw, 10rem); }.about { display: grid; grid-template-columns: .65fr 1.65fr; gap: 2rem; }.about-content { max-width: 840px; }.body-copy { max-width: 640px; color: var(--muted); line-height: 1.72; font-size: 1.04rem; }.body-copy p + p { margin-top: 1.15rem; }
+.stats { display: flex; flex-wrap: wrap; gap: clamp(2rem, 5vw, 4rem); margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid #dcd8cc; }
+.stat { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 .15rem; }
+.stat-number, .stat-suffix { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(2.4rem, 4vw, 3.2rem); color: var(--green); line-height: 1; }
+.stat p { flex-basis: 100%; margin: .5rem 0 0; color: var(--muted); font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.pillars .reveal:nth-child(2) { transition-delay: .08s; }
+.pillars .reveal:nth-child(3) { transition-delay: .16s; }
+.pillars .reveal:nth-child(4) { transition-delay: .24s; }
+.project-grid .reveal:nth-child(2) { transition-delay: .12s; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 .why-us .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.2rem; }.pillar { border-top: 2px solid #dcd8cc; padding-top: 1.4rem; }.pillar-index { color: var(--green); font-family: "Playfair Display", serif; font-size: 1.1rem; font-weight: 700; }.pillar h3 { font-size: 1.5rem; margin: .5rem 0 .7rem; }.pillar p { color: var(--muted); line-height: 1.6; font-size: .96rem; margin: 0; }
 
 .projects { background: var(--deep-green); color: white; }.projects .section-label,.projects .eyebrow { color: #bce5c9; }.section-heading { display: grid; grid-template-columns: .65fr 1.65fr; gap: 2rem; margin-bottom: 2.8rem; }

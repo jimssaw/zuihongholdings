@@ -76,4 +76,37 @@ if (slideHost && HERO_IMAGES.length) {
   });
 }
 
-document.querySelector('#year').textContent = new Date().getFullYear(); 
+document.querySelector('#year').textContent = new Date().getFullYear();
+
+/* --- Scroll reveal + stat counters -------------------------------- */
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animateCount(el) {
+  const target = el.hasAttribute('data-count-from')
+    ? new Date().getFullYear() - Number(el.getAttribute('data-count-from'))
+    : Number(el.getAttribute('data-target'));
+
+  if (reduceMotion || !target) { el.textContent = target; return; }
+
+  const duration = 1200;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('is-visible');
+    entry.target.querySelectorAll('.stat-number').forEach(animateCount);
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.25 });
+
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
