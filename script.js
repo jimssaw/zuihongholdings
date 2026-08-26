@@ -117,7 +117,7 @@ const langGate = document.getElementById('lang-gate');
 const metaDescription = document.querySelector('meta[name="description"]');
 
 function applyLanguage(lang) {
-  const dict = TRANSLATIONS[lang];
+  const dict = typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang];
   if (!dict) return;
 
   document.documentElement.lang = lang;
@@ -133,20 +133,26 @@ function applyLanguage(lang) {
     btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
   });
 
-  localStorage.setItem(LANG_KEY, lang);
+  try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* storage unavailable — ignore */ }
+}
+
+function hideLangGate() {
+  if (!langGate || langGate.hidden) return;
+  langGate.classList.add('is-hidden');
+  setTimeout(() => { langGate.hidden = true; }, 300);
 }
 
 document.querySelectorAll('[data-lang]').forEach((btn) => {
   btn.addEventListener('click', () => {
+    // Dismiss the gate first so a translation/storage error never leaves the user stuck.
+    hideLangGate();
     applyLanguage(btn.getAttribute('data-lang'));
-    if (langGate && !langGate.hidden) {
-      langGate.classList.add('is-hidden');
-      setTimeout(() => { langGate.hidden = true; }, 300);
-    }
   });
 });
 
-const savedLang = localStorage.getItem(LANG_KEY);
+let savedLang = null;
+try { savedLang = localStorage.getItem(LANG_KEY); } catch (e) { /* storage unavailable — ignore */ }
+
 if (savedLang) {
   applyLanguage(savedLang);
 } else if (langGate) {
