@@ -16,14 +16,14 @@ const TRANSLATIONS = {
     'nav.contact': 'Contact',
 
     'hero.eyebrow': 'Banting, Selangor · Established 2010',
-    'hero.title': 'Building value and<br />shaping communities<br /><em>for generations.</em>',
+    'hero.title': 'Building Value.<br />Shaping Communities.<br /><em>For Generations.</em>',
     'hero.intro': 'Zuihong Holdings is a Malaysian property development and investment holding company focused on places people are proud to call home.',
     'hero.discoverMore': 'Discover more',
     'hero.talkToUs': 'Talk to us <span>→</span>',
 
     'about.sectionLabel': '01 / Our company',
     'about.eyebrow': 'A local perspective, built to last',
-    'about.title': 'Thoughtful development with a long-term view.',
+    'about.title': 'A Thoughtful Approach.<br />A Long-Term View.',
     'about.p1': 'Incorporated in Malaysia in 2010, Zuihong Holdings Sdn. Bhd. is based in Banting, Selangor. We develop and hold property with a clear purpose: to create enduring value for the communities and stakeholders we serve.',
     'about.p2': 'Our approach balances practical design, reliable delivery and a lasting commitment to the places we build.',
     'stats.years': 'Years of experience',
@@ -103,14 +103,14 @@ const TRANSLATIONS = {
     'nav.contact': 'Hubungi',
 
     'hero.eyebrow': 'Banting, Selangor · Ditubuhkan 2010',
-    'hero.title': 'Membina nilai dan<br />membentuk komuniti<br /><em>untuk generasi akan datang.</em>',
+    'hero.title': 'Membina Nilai.<br />Membentuk Komuniti.<br /><em>Untuk Generasi Akan Datang.</em>',
     'hero.intro': 'Zuihong Holdings ialah syarikat pembangunan hartanah dan pemegangan pelaburan Malaysia yang menumpukan kepada tempat kediaman yang membanggakan.',
     'hero.discoverMore': 'Ketahui Lebih Lanjut',
     'hero.talkToUs': 'Hubungi Kami <span>→</span>',
 
     'about.sectionLabel': '01 / Syarikat Kami',
     'about.eyebrow': 'Perspektif Tempatan, Dibina untuk Bertahan Lama',
-    'about.title': 'Pembangunan yang teliti dengan visi jangka panjang.',
+    'about.title': 'Pendekatan yang Teliti.<br />Visi Jangka Panjang.',
     'about.p1': 'Diperbadankan di Malaysia pada tahun 2010, Zuihong Holdings Sdn. Bhd. beroperasi dari Banting, Selangor. Kami membangun dan memegang hartanah dengan tujuan yang jelas: mencipta nilai berkekalan untuk komuniti dan pihak berkepentingan yang kami khidmati.',
     'about.p2': 'Pendekatan kami mengimbangi reka bentuk praktikal, penyampaian yang boleh dipercayai, serta komitmen berkekalan terhadap tempat yang kami bina.',
     'stats.years': 'Tahun Pengalaman',
