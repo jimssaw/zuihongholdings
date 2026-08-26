@@ -7,7 +7,7 @@ a { color: inherit; text-decoration: none; }
 .skip-link { position: fixed; left: 1rem; top: -5rem; background: var(--ink); color: white; padding: .75rem; z-index: 10; } .skip-link:focus { top: 1rem; }
 .lang-gate { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 1.4rem; background: var(--ink); opacity: 1; transition: opacity .3s ease; }
 .lang-gate.is-hidden { opacity: 0; pointer-events: none; }
-.lang-gate-box { max-width: 460px; text-align: center; color: white; }
+.lang-gate-box { width: 100%; max-width: 460px; text-align: center; color: white; }
 .lang-gate-eyebrow { text-transform: uppercase; font-size: .72rem; letter-spacing: .16em; font-weight: 700; color: #9fe3b6; margin: 0 0 .9rem; }
 .lang-gate-title { font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 1rem; }
 .lang-gate-sub { color: rgba(255, 255, 255, .78); line-height: 1.6; margin: 0 0 2.2rem; }
