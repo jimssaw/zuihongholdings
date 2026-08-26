@@ -47,9 +47,9 @@ h1,h2,h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; ma
 .projects { background: var(--deep-green); color: white; }.projects .section-label,.projects .eyebrow { color: #bce5c9; }.section-heading { display: grid; grid-template-columns: .65fr 1.65fr; gap: 2rem; margin-bottom: 2.8rem; }
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
 .project-card { display: flex; flex-direction: column; background: #f7f6f2; color: var(--ink); }
-.project-media { position: relative; }
-.project-media img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; }
-.project-media-placeholder { min-height: 260px; display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #e7e4da, #e7e4da 12px, #ddd9cc 12px, #ddd9cc 24px); }
+.project-media { position: relative; aspect-ratio: 3 / 2; }
+.project-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; }
+.project-media-placeholder { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #e7e4da, #e7e4da 12px, #ddd9cc 12px, #ddd9cc 24px); }
 .project-media-placeholder span:not(.status-badge) { color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .status-badge { position: absolute; top: 1rem; left: 1rem; padding: .4rem .8rem; border-radius: 999px; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .status-ongoing { background: var(--green); color: white; }
