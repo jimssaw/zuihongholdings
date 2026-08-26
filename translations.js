@@ -1,0 +1,157 @@
+/* ---------------------------------------------------------------
+   SITE TEXT — English (en) and Bahasa Malaysia (ms)
+   Every data-i18n="key" in index.html looks itself up here. To edit
+   copy in either language, find the matching key below and change
+   the string — no HTML editing needed.
+----------------------------------------------------------------- */
+const TRANSLATIONS = {
+  en: {
+    'meta.title': 'Zuihong Holdings | Building Value, Shaping Communities',
+    'meta.description': 'Zuihong Holdings Sdn. Bhd. — property development and investment holding in Banting, Selangor.',
+
+    'nav.about': 'About',
+    'nav.whyUs': 'Why Us',
+    'nav.projects': 'Projects',
+    'nav.news': 'News',
+    'nav.contact': 'Contact',
+
+    'hero.eyebrow': 'Banting, Selangor · Established 2010',
+    'hero.title': 'Building value and<br />shaping communities<br /><em>for generations.</em>',
+    'hero.intro': 'Zuihong Holdings is a Malaysian property development and investment holding company focused on places people are proud to call home.',
+    'hero.discoverMore': 'Discover more',
+    'hero.talkToUs': 'Talk to us <span>→</span>',
+
+    'about.sectionLabel': '01 / Our company',
+    'about.eyebrow': 'A local perspective, built to last',
+    'about.title': 'Thoughtful development with a long-term view.',
+    'about.p1': 'Incorporated in Malaysia in 2010, Zuihong Holdings Sdn. Bhd. is based in Banting, Selangor. We develop and hold property with a clear purpose: to create enduring value for the communities and stakeholders we serve.',
+    'about.p2': 'Our approach balances practical design, reliable delivery and a lasting commitment to the places we build.',
+    'stats.years': 'Years of experience',
+    'stats.developments': 'Developments delivered',
+    'stats.homes': 'Homes built',
+
+    'whyUs.sectionLabel': '02 / Why choose us',
+    'whyUs.eyebrow': 'What sets us apart',
+    'whyUs.title': 'Built on trust, delivered with care.',
+    'pillar.trust.title': 'Trust',
+    'pillar.trust.desc': 'Every home we build carries our name. We deliver on what we promise, from the sales gallery to the final handover.',
+    'pillar.quality.title': 'Quality',
+    'pillar.quality.desc': 'Thoughtful design and reliable construction, so the homes we build stand strong for the families who live in them.',
+    'pillar.community.title': 'Community',
+    'pillar.community.desc': "We build for the people who will live here for decades to come, not just the buyers of today.",
+    'pillar.vision.title': 'Long-term vision',
+    'pillar.vision.desc': "Since 2010, we've taken a patient, considered approach to every development — value that compounds over generations.",
+
+    'projects.sectionLabel': '03 / Our developments',
+    'projects.eyebrow': "Homes we've built and are building",
+    'projects.title': 'Homes designed for everyday living.',
+
+    'baiduri.badge': 'Ongoing · Est. 2027',
+    'baiduri.desc': '28 two-storey semi-detached homes with individual titles and freehold tenure, from RM958,000.',
+    'baiduri.spec1': '4+1 bed · 5 bath · 4–5 car parks',
+    'baiduri.spec2': '3,585 sq ft built-up · 4,032–4,264 sq ft land',
+    'baiduri.viewFloorPlan': 'View floor plan <span>↗</span>',
+    'baiduri.register': 'Register your interest <span>→</span>',
+
+    'ilham.badge': 'Completed 2022',
+    'ilham.desc': '27 two-storey terrace homes with individual titles and freehold tenure, from RM502,200.',
+    'ilham.spec1': '4 bed · 3 bath · 2 car parks',
+    'ilham.spec2': '2,000 sq ft built-up · 1,400 sq ft land',
+    'ilham.viewFloorPlan': 'View floor plan <span>↗</span>',
+    'ilham.enquire': 'Enquire now <span>→</span>',
+
+    'location.baiduriLabel': 'Taman Baiduri · Location',
+    'location.findUs': 'Find us in Banting.',
+    'location.ilhamLabel': 'Taman Ilham · Location',
+
+    'news.sectionLabel': '04 / News &amp; updates',
+    'news.eyebrow': 'Latest from Zuihong',
+    'news.title': 'Updates, straight from us.',
+    'news.empty': "We're preparing our first updates — check back soon, or reach out on WhatsApp for the latest on new launches.",
+
+    'contact.eyebrow': '05 / Get in touch',
+    'contact.title': "Let's start a conversation.",
+    'contact.p': 'For project enquiries or to learn more about Zuihong Holdings, contact our team.',
+    'contact.telephone': 'Telephone',
+    'contact.mobile': 'Mobile & WhatsApp',
+    'contact.hq': 'Headquarters',
+    'contact.whatsapp': 'WhatsApp us',
+
+    'footer.backToTop': 'Back to top ↑',
+  },
+
+  ms: {
+    'meta.title': 'Zuihong Holdings | Membina Nilai, Membentuk Komuniti',
+    'meta.description': 'Zuihong Holdings Sdn. Bhd. — syarikat pembangunan hartanah dan pemegangan pelaburan di Banting, Selangor.',
+
+    'nav.about': 'Tentang Kami',
+    'nav.whyUs': 'Kenapa Kami',
+    'nav.projects': 'Projek',
+    'nav.news': 'Berita',
+    'nav.contact': 'Hubungi',
+
+    'hero.eyebrow': 'Banting, Selangor · Ditubuhkan 2010',
+    'hero.title': 'Membina nilai dan<br />membentuk komuniti<br /><em>untuk generasi akan datang.</em>',
+    'hero.intro': 'Zuihong Holdings ialah syarikat pembangunan hartanah dan pemegangan pelaburan Malaysia yang menumpukan kepada tempat kediaman yang membanggakan.',
+    'hero.discoverMore': 'Ketahui Lebih Lanjut',
+    'hero.talkToUs': 'Hubungi Kami <span>→</span>',
+
+    'about.sectionLabel': '01 / Syarikat Kami',
+    'about.eyebrow': 'Perspektif Tempatan, Dibina untuk Bertahan Lama',
+    'about.title': 'Pembangunan yang teliti dengan visi jangka panjang.',
+    'about.p1': 'Diperbadankan di Malaysia pada tahun 2010, Zuihong Holdings Sdn. Bhd. beroperasi dari Banting, Selangor. Kami membangun dan memegang hartanah dengan tujuan yang jelas: mencipta nilai berkekalan untuk komuniti dan pihak berkepentingan yang kami khidmati.',
+    'about.p2': 'Pendekatan kami mengimbangi reka bentuk praktikal, penyampaian yang boleh dipercayai, serta komitmen berkekalan terhadap tempat yang kami bina.',
+    'stats.years': 'Tahun Pengalaman',
+    'stats.developments': 'Pembangunan Disiapkan',
+    'stats.homes': 'Rumah Dibina',
+
+    'whyUs.sectionLabel': '02 / Kenapa Pilih Kami',
+    'whyUs.eyebrow': 'Apa yang Membezakan Kami',
+    'whyUs.title': 'Dibina atas kepercayaan, disampaikan dengan teliti.',
+    'pillar.trust.title': 'Kepercayaan',
+    'pillar.trust.desc': 'Setiap rumah yang kami bina membawa nama kami. Kami menepati janji, dari galeri jualan sehingga penyerahan kunci.',
+    'pillar.quality.title': 'Kualiti',
+    'pillar.quality.desc': 'Reka bentuk yang teliti dan pembinaan yang boleh dipercayai, supaya rumah yang kami bina kukuh untuk keluarga yang mendiaminya.',
+    'pillar.community.title': 'Komuniti',
+    'pillar.community.desc': 'Kami membina untuk penduduk yang akan tinggal di sini untuk beberapa dekad akan datang, bukan sekadar pembeli hari ini.',
+    'pillar.vision.title': 'Visi Jangka Panjang',
+    'pillar.vision.desc': 'Sejak 2010, kami mengamalkan pendekatan yang sabar dan teliti bagi setiap pembangunan — nilai yang berkembang merentasi generasi.',
+
+    'projects.sectionLabel': '03 / Pembangunan Kami',
+    'projects.eyebrow': 'Rumah yang Telah dan Sedang Kami Bina',
+    'projects.title': 'Rumah direka untuk kehidupan seharian.',
+
+    'baiduri.badge': 'Sedang Dibina · Anggaran 2027',
+    'baiduri.desc': '28 unit rumah banglo berkembar dua tingkat dengan hakmilik individu dan pegangan bebas, bermula RM958,000.',
+    'baiduri.spec1': '4+1 bilik tidur · 5 bilik mandi · 4–5 tempat letak kereta',
+    'baiduri.spec2': '3,585 kaki persegi binaan · 4,032–4,264 kaki persegi tanah',
+    'baiduri.viewFloorPlan': 'Lihat Pelan Lantai <span>↗</span>',
+    'baiduri.register': 'Daftar Minat Anda <span>→</span>',
+
+    'ilham.badge': 'Siap 2022',
+    'ilham.desc': '27 unit rumah teres dua tingkat dengan hakmilik individu dan pegangan bebas, bermula RM502,200.',
+    'ilham.spec1': '4 bilik tidur · 3 bilik mandi · 2 tempat letak kereta',
+    'ilham.spec2': '2,000 kaki persegi binaan · 1,400 kaki persegi tanah',
+    'ilham.viewFloorPlan': 'Lihat Pelan Lantai <span>↗</span>',
+    'ilham.enquire': 'Hubungi Sekarang <span>→</span>',
+
+    'location.baiduriLabel': 'Taman Baiduri · Lokasi',
+    'location.findUs': 'Cari kami di Banting.',
+    'location.ilhamLabel': 'Taman Ilham · Lokasi',
+
+    'news.sectionLabel': '04 / Berita &amp; Kemas Kini',
+    'news.eyebrow': 'Terkini daripada Zuihong',
+    'news.title': 'Kemas kini, terus daripada kami.',
+    'news.empty': 'Kami sedang menyediakan kemas kini pertama kami — sila semak semula tidak lama lagi, atau hubungi kami melalui WhatsApp untuk maklumat pelancaran terbaharu.',
+
+    'contact.eyebrow': '05 / Hubungi Kami',
+    'contact.title': 'Mari kita mulakan perbualan.',
+    'contact.p': 'Untuk pertanyaan projek atau maklumat lanjut tentang Zuihong Holdings, hubungi pasukan kami.',
+    'contact.telephone': 'Telefon',
+    'contact.mobile': 'Telefon Bimbit & WhatsApp',
+    'contact.hq': 'Ibu Pejabat',
+    'contact.whatsapp': 'WhatsApp Kami',
+
+    'footer.backToTop': 'Kembali ke Atas ↑',
+  },
+};
