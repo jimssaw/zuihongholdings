@@ -121,7 +121,7 @@
           <div><p class="eyebrow" data-i18n="projects.eyebrow">Homes we've built and are building</p><h2 data-i18n="projects.title">Homes designed for everyday living.</h2></div>
         </div>
         <div class="project-grid">
-          <article class="project-card reveal">
+          <article class="project-card reveal" id="taman-baiduri">
             <div class="project-media">
               <img src="taman-baiduri-card.jpg" alt="Taman Baiduri two-storey semi-detached homes" />
               <span class="status-badge status-ongoing" data-i18n="baiduri.badge">Ongoing · Est. 2027</span>
@@ -140,7 +140,7 @@
               </div>
             </div>
           </article>
-          <article class="project-card reveal">
+          <article class="project-card reveal" id="taman-ilham">
             <div class="project-media">
               <img src="taman-ilham.jpg" alt="Taman Ilham two-storey terrace homes" />
               <span class="status-badge status-completed" data-i18n="ilham.badge">Completed 2022</span>
@@ -213,7 +213,45 @@
         </div>
       </section>
     </main>
-    <footer><span>© <span id="year"></span> Zuihong Holdings Sdn. Bhd.</span><a href="#home" data-i18n="footer.backToTop">Back to top ↑</a></footer>
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-eyebrow">Zuihong Holdings Sdn. Bhd.</p>
+          <h2 class="footer-tagline" data-i18n="footer.tagline">A Home for Every Family.<br />A Legacy for Every Generation.</h2>
+          <p class="footer-sub" data-i18n="footer.sub">Building Value, Shaping Communities — Since 2010</p>
+          <div class="footer-logo">
+            <img src="zhh-logo.png" alt="ZHH" />
+            <span>Zuihong Holdings</span>
+          </div>
+        </div>
+        <div class="footer-links" role="navigation" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer.col.about">About</p>
+            <a href="#about" data-i18n="footer.link.company">Our Company</a>
+            <a href="#why-us" data-i18n="footer.link.whyUs">Why Choose Us</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer.col.projects">Projects</p>
+            <a href="#taman-baiduri">Taman Baiduri</a>
+            <a href="#taman-ilham">Taman Ilham</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer.col.updates">Updates</p>
+            <a href="#news" data-i18n="footer.link.news">News &amp; Updates</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footer.col.contact">Contact</p>
+            <a href="tel:+60331878838">03-3187 8838</a>
+            <a href="https://wa.me/60108396353" target="_blank" rel="noopener" data-i18n="footer.link.whatsapp">WhatsApp Us</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=49A%2C+Jalan+Mulia%2C+Taman+Mulia%2C+42700+Banting%2C+Selangor" target="_blank" rel="noopener" data-i18n="footer.link.visit">Visit Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> <span data-i18n="footer.rights">Zuihong Holdings Sdn. Bhd. All rights reserved.</span></span>
+        <a href="#home" data-i18n="footer.backToTop">Back to top ↑</a>
+      </div>
+    </footer>
     <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
