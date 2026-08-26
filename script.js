@@ -110,3 +110,45 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.25 });
 
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+/* --- Language switch (English / Bahasa Malaysia) ------------------- */
+const LANG_KEY = 'zhh-lang';
+const langGate = document.getElementById('lang-gate');
+const metaDescription = document.querySelector('meta[name="description"]');
+
+function applyLanguage(lang) {
+  const dict = TRANSLATIONS[lang];
+  if (!dict) return;
+
+  document.documentElement.lang = lang;
+  document.title = dict['meta.title'];
+  if (metaDescription) metaDescription.setAttribute('content', dict['meta.description']);
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const value = dict[el.getAttribute('data-i18n')];
+    if (value !== undefined) el.innerHTML = value;
+  });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
+  });
+
+  localStorage.setItem(LANG_KEY, lang);
+}
+
+document.querySelectorAll('[data-lang]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    applyLanguage(btn.getAttribute('data-lang'));
+    if (langGate && !langGate.hidden) {
+      langGate.classList.add('is-hidden');
+      setTimeout(() => { langGate.hidden = true; }, 300);
+    }
+  });
+});
+
+const savedLang = localStorage.getItem(LANG_KEY);
+if (savedLang) {
+  applyLanguage(savedLang);
+} else if (langGate) {
+  langGate.hidden = false;
+}
