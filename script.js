@@ -25,6 +25,11 @@
         if (value !== undefined) el.innerHTML = value;
       });
 
+      document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+        const value = dict[el.getAttribute('data-i18n-placeholder')];
+        if (value !== undefined) el.setAttribute('placeholder', value);
+      });
+
       document.querySelectorAll('.lang-btn').forEach((btn) => {
         btn.classList.toggle('is-active', btn.getAttribute('data-lang') === lang);
       });
@@ -56,6 +61,55 @@
     langGate.hidden = false;
   }
 })();
+
+/* --- Contact form (submits to Formspree) --------------------------- */
+try {
+  const form = document.getElementById('contact-form');
+  const status = form ? form.querySelector('.form-status') : null;
+
+  function formText(key, fallback) {
+    const lang = document.documentElement.lang || 'en';
+    const dict = typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang];
+    return (dict && dict[key]) || fallback;
+  }
+
+  if (form && status) {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+        status.textContent = formText('form.error', "Something went wrong and your message wasn't sent. Please try again, or reach us on WhatsApp below.");
+        status.className = 'form-status is-error';
+        return;
+      }
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      status.className = 'form-status';
+      status.textContent = formText('form.sending', 'Sending…');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      })
+        .then((response) => {
+          if (response.ok) {
+            status.textContent = formText('form.success', "Thank you — your message has been sent. We'll be in touch shortly.");
+            status.className = 'form-status is-success';
+            form.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(() => {
+          status.textContent = formText('form.error', "Something went wrong and your message wasn't sent. Please try again, or reach us on WhatsApp below.");
+          status.className = 'form-status is-error';
+        })
+        .finally(() => { submitBtn.disabled = false; });
+    });
+  }
+} catch (e) { /* contact form unavailable */ }
 
 /* --- Mobile navigation ------------------------------------------ */
 try {
