@@ -198,19 +198,45 @@
         </div>
       </section>
 
-      <section class="contact section" id="contact">
-        <div class="contact-photo"><img src="headquarters.jpg" alt="Zuihong Holdings headquarters in Taman Mulia, Banting" /></div>
-        <div class="contact-content reveal">
+      <section class="contact-form-section section" id="contact">
+        <div class="contact-heading reveal">
           <p class="eyebrow" data-i18n="contact.eyebrow">05 / Get in touch</p>
-          <h2 data-i18n="contact.title">Let's start a conversation.</h2>
-          <p data-i18n="contact.p">For project enquiries or to learn more about Zuihong Holdings, contact our team.</p>
-          <div class="contact-details">
-            <div><span data-i18n="contact.telephone">Telephone</span><a href="tel:+60331878838">03-3187 8838</a></div>
-            <div><span data-i18n="contact.mobile">Mobile & WhatsApp</span><a href="https://wa.me/60108396353" target="_blank" rel="noopener">010-8396 353</a></div>
-            <div><span data-i18n="contact.hq">Headquarters</span><a href="https://www.google.com/maps/search/?api=1&query=49A%2C+Jalan+Mulia%2C+Taman+Mulia%2C+42700+Banting%2C+Selangor" target="_blank" rel="noopener">No. 49A, Jalan Mulia,<br />Taman Mulia, 42700 Banting, Selangor</a></div>
-          </div>
-          <a class="button button-solid" href="https://wa.me/60108396353" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp us</a>
+          <h2 data-i18n="contact.title">We're Here to Help.</h2>
+          <p data-i18n="contact.p">For project enquiries or to learn more about Zuihong Holdings, send us a message.</p>
         </div>
+
+        <!-- Formspree: replace YOUR_FORM_ID below with your real endpoint from formspree.io -->
+        <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="_gotcha" class="form-hp" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New enquiry from zuihongholdings.com" />
+
+          <input type="text" name="name" data-i18n-placeholder="form.name" placeholder="Preferred Name*" required />
+          <input type="tel" name="phone" data-i18n-placeholder="form.phone" placeholder="Phone Number* (e.g. 012-345 6789)" required />
+          <input type="email" name="email" data-i18n-placeholder="form.email" placeholder="Email*" required />
+          <select name="enquiry_type" required>
+            <option value="" disabled selected data-i18n="form.enquiryDefault">Select Enquiry Type*</option>
+            <option data-i18n="form.enquiryGeneral">General Enquiry</option>
+            <option>Taman Baiduri</option>
+            <option>Taman Ilham</option>
+            <option data-i18n="form.enquiryCareers">Careers</option>
+            <option data-i18n="form.enquiryOther">Other</option>
+          </select>
+          <input type="text" name="message" data-i18n-placeholder="form.message" placeholder="Enter a short message regarding your query*" required />
+
+          <label class="form-consent">
+            <input type="checkbox" required />
+            <span data-i18n="form.consent">I am at least 18 years of age and I consent to Zuihong Holdings Sdn. Bhd. collecting and processing my personal data to respond to this enquiry, in accordance with the Personal Data Protection Act 2010.</span>
+          </label>
+          <details class="form-consent-details">
+            <summary data-i18n="form.readMore">Read more</summary>
+            <p data-i18n="form.consentFull">Zuihong Holdings Sdn. Bhd. ("we", "us") collects the personal data you submit through this form — including your name, phone number, email address and enquiry details — solely to respond to your enquiry and, where relevant, to share updates about our developments. We do not sell or share your data with third parties for marketing purposes. You may withdraw consent or request access to, correction of, or deletion of your data at any time by contacting us via the details in this website's footer.</p>
+          </details>
+
+          <button type="submit" class="button button-solid" data-i18n="form.submit">Submit</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <a class="whatsapp-alt" href="https://wa.me/60108396353" target="_blank" rel="noopener" data-i18n="form.preferWhatsapp">Prefer WhatsApp? Chat with us <span>→</span></a>
       </section>
     </main>
     <footer class="site-footer">
