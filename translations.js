@@ -15,9 +15,9 @@ const TRANSLATIONS = {
     'nav.news': 'News',
     'nav.contact': 'Contact',
 
-    'hero.eyebrow': 'Banting, Selangor · Established 2010',
+    'hero.eyebrow': 'Selangor · Established 2010',
     'hero.title': 'Building Value.<br />Shaping Communities.<br /><em>For Generations.</em>',
-    'hero.intro': 'Zuihong Holdings is a Malaysian property development and investment holding company focused on places people are proud to call home.',
+    'hero.intro': 'Zuihong Holdings Sdn Bhd is a Malaysian property development and investment holding company focused on places people are proud to call home.',
     'hero.discoverMore': 'Discover more',
     'hero.talkToUs': 'Talk to us <span>→</span>',
 
@@ -115,9 +115,9 @@ const TRANSLATIONS = {
     'nav.news': 'Berita',
     'nav.contact': 'Hubungi',
 
-    'hero.eyebrow': 'Banting, Selangor · Ditubuhkan 2010',
+    'hero.eyebrow': 'Selangor · Ditubuhkan 2010',
     'hero.title': 'Membina Nilai.<br />Membentuk Komuniti.<br /><em>Untuk Generasi Akan Datang.</em>',
-    'hero.intro': 'Zuihong Holdings ialah syarikat pembangunan hartanah dan pemegangan pelaburan Malaysia yang menumpukan kepada tempat kediaman yang membanggakan.',
+    'hero.intro': 'Zuihong Holdings Sdn Bhd ialah syarikat pembangunan hartanah dan pemegangan pelaburan Malaysia yang menumpukan kepada tempat kediaman yang membanggakan.',
     'hero.discoverMore': 'Ketahui Lebih Lanjut',
     'hero.talkToUs': 'Hubungi Kami <span>→</span>',
 
