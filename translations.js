@@ -60,9 +60,7 @@ const TRANSLATIONS = {
     'ilham.viewFloorPlan': 'View floor plan <span>↗</span>',
     'ilham.enquire': 'Enquire now <span>→</span>',
 
-    'location.baiduriLabel': 'Taman Baiduri · Location',
     'location.findUs': 'Find us in Banting.',
-    'location.ilhamLabel': 'Taman Ilham · Location',
 
     'detail.breadcrumbHome': 'Home',
     'detail.breadcrumbProjects': 'Projects',
@@ -209,9 +207,7 @@ const TRANSLATIONS = {
     'ilham.viewFloorPlan': 'Lihat Pelan Lantai <span>↗</span>',
     'ilham.enquire': 'Hubungi Sekarang <span>→</span>',
 
-    'location.baiduriLabel': 'Taman Baiduri · Lokasi',
     'location.findUs': 'Cari kami di Banting.',
-    'location.ilhamLabel': 'Taman Ilham · Lokasi',
 
     'detail.breadcrumbHome': 'Laman Utama',
     'detail.breadcrumbProjects': 'Projek',
