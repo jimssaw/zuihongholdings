@@ -26,7 +26,8 @@ nav { display: flex; align-items: center; gap: clamp(1.1rem, 2.4vw, 2.25rem); fo
 .menu-toggle { display: none; border: 0; background: none; font-size: 1.45rem; }
 .hero { position: relative; display: flex; align-items: center; min-height: calc(100vh - 88px); overflow: hidden; background: #12160f; isolation: isolate; }
 .hero-slides { position: absolute; inset: 0; z-index: -2; }
-.hero-slide { position: absolute; inset: 0; background-position: center; background-size: cover; opacity: 0; transition: opacity 1.5s ease-in-out, transform 8s linear; transform: scale(1); }
+.hero-slide { position: absolute; inset: 0; background-position: center; background-size: cover; background-attachment: fixed; opacity: 0; transition: opacity 1.5s ease-in-out, transform 8s linear; transform: scale(1); }
+@media (max-width: 760px) { .hero-slide { background-attachment: scroll; } }
 .hero-slide.is-active { opacity: 1; transform: scale(1.07); }
 .hero-scrim { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(8, 18, 11, .82) 0%, rgba(8, 18, 11, .62) 42%, rgba(8, 18, 11, .28) 75%, rgba(8, 18, 11, .34) 100%); }
 .hero-dots { position: absolute; left: 50%; bottom: 2.1rem; transform: translateX(-50%); display: flex; gap: .6rem; z-index: 2; }
