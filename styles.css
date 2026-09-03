@@ -64,7 +64,7 @@ h1,h2,h3 { font-family: "DM Sans", sans-serif; font-weight: 800; margin: .65rem 
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem; }
 .project-card { display: flex; flex-direction: column; background: #f7f6f2; color: var(--ink); }
 .project-media { position: relative; aspect-ratio: 3 / 2; }
-.project-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; display: block; }
+.project-media img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 42%; display: block; }
 .project-media-placeholder { display: flex; align-items: center; justify-content: center; background: repeating-linear-gradient(135deg, #e7e4da, #e7e4da 12px, #ddd9cc 12px, #ddd9cc 24px); }
 .project-media-placeholder span:not(.status-badge) { color: var(--muted); font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
 .status-badge { position: absolute; top: 1rem; left: 1rem; padding: .4rem .8rem; border-radius: 999px; font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
