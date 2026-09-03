@@ -16,9 +16,12 @@
       const dict = typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang];
       if (!dict) return;
 
+      const titleKey = (typeof PAGE_META !== 'undefined' && PAGE_META.title) || 'meta.title';
+      const descKey = (typeof PAGE_META !== 'undefined' && PAGE_META.description) || 'meta.description';
+
       document.documentElement.lang = lang;
-      document.title = dict['meta.title'];
-      if (metaDescription) metaDescription.setAttribute('content', dict['meta.description']);
+      document.title = dict[titleKey];
+      if (metaDescription) metaDescription.setAttribute('content', dict[descKey]);
 
       document.querySelectorAll('[data-i18n]').forEach((el) => {
         const value = dict[el.getAttribute('data-i18n')];
@@ -110,6 +113,16 @@ try {
     });
   }
 } catch (e) { /* contact form unavailable */ }
+
+/* --- Pre-select enquiry type from a project page's CTA link -------- */
+try {
+  const enquiry = new URLSearchParams(window.location.search).get('enquiry');
+  const select = document.querySelector('select[name="enquiry_type"]');
+  if (enquiry && select) {
+    const match = Array.from(select.options).find((opt) => opt.textContent.trim() === enquiry.trim());
+    if (match) select.value = match.value || match.textContent;
+  }
+} catch (e) { /* enquiry pre-select unavailable */ }
 
 /* --- Mobile navigation ------------------------------------------ */
 try {
