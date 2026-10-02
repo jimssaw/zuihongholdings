@@ -207,6 +207,36 @@ try {
   }
 } catch (e) { /* hero slideshow unavailable */ }
 
+/* --- Project page photo gallery (arrows + swipe) ------------------ */
+try {
+  document.querySelectorAll('.hero-gallery').forEach((gallery) => {
+    const track = gallery.querySelector('.gallery-track');
+    const slides = track.querySelectorAll('.gallery-slide');
+    const current = gallery.querySelector('.gallery-current');
+    const total = gallery.querySelector('.gallery-total');
+    const count = slides.length;
+
+    if (total) total.textContent = count;
+
+    const index = () => Math.round(track.scrollLeft / track.clientWidth);
+    const go = (i) => track.scrollTo({ left: ((i + count) % count) * track.clientWidth });
+
+    gallery.querySelector('.gallery-prev').addEventListener('click', () => go(index() - 1));
+    gallery.querySelector('.gallery-next').addEventListener('click', () => go(index() + 1));
+
+    track.addEventListener('scroll', () => {
+      if (current) current.textContent = index() + 1;
+    }, { passive: true });
+
+    // Load the next photo early so it is ready before the user swipes to it.
+    track.addEventListener('scroll', () => {
+      const next = slides[index() + 1];
+      const img = next && next.querySelector('img[loading="lazy"]');
+      if (img) img.loading = 'eager';
+    }, { passive: true });
+  });
+} catch (e) { /* gallery unavailable — photos remain swipeable via native scroll */ }
+
 /* --- Footer year -------------------------------------------------- */
 try {
   const yearEl = document.querySelector('#year');

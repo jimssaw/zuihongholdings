@@ -141,6 +141,20 @@ h1,h2,h3 { font-family: "DM Sans", sans-serif; font-weight: 800; margin: .65rem 
 .detail-hero .status-badge { position: static; display: inline-block; margin-bottom: 1rem; }
 .detail-hero-copy .eyebrow { color: #9fe3b6; }
 .detail-hero-copy h1 { color: white; font-size: clamp(2rem, 4vw, 3.4rem); margin: .3rem 0 .5rem; }
+/* Swipeable hero gallery (scroll-snap gives native touch/trackpad swipe; arrows wired in script.js) */
+.gallery-track { position: absolute; inset: 0; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; outline: none; }
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-slide { position: relative; flex: 0 0 100%; height: 100%; margin: 0; scroll-snap-align: start; scroll-snap-stop: always; }
+.hero-gallery .detail-hero-scrim, .hero-gallery .detail-hero-copy { pointer-events: none; }
+.gallery-caption { position: absolute; top: 1.1rem; left: clamp(1.4rem, 9vw, 10rem); padding: .4rem .8rem; border-radius: 999px; background: rgba(8, 18, 11, .62); color: white; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+.gallery-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .88); color: var(--ink); font-size: 1.9rem; line-height: 1; padding-bottom: .2rem; cursor: pointer; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); transition: background .2s, color .2s; }
+.gallery-arrow:hover { background: var(--green); color: white; }
+.gallery-arrow:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+.gallery-prev { left: clamp(.8rem, 2.5vw, 2rem); }
+.gallery-next { right: clamp(.8rem, 2.5vw, 2rem); }
+.gallery-count { position: absolute; top: 1.1rem; right: clamp(1rem, 2.5vw, 2rem); z-index: 2; margin: 0; padding: .4rem .8rem; border-radius: 999px; background: rgba(8, 18, 11, .62); color: white; font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
+@media (max-width: 760px) { .gallery-arrow { width: 38px; height: 38px; font-size: 1.5rem; top: auto; bottom: 1.4rem; transform: none; } .gallery-prev { left: auto; right: 3.8rem; } .gallery-next { right: 1rem; } .gallery-caption { left: 1rem; } }
+@media (prefers-reduced-motion: reduce) { .gallery-track { scroll-behavior: auto; } }
 .detail-price { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 800; color: #6ee79b; }
 
 .quick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.6rem 1.2rem; background: #f7f6f2; padding: clamp(1.6rem, 3vw, 2.2rem) clamp(1.4rem, 9vw, 10rem); }
